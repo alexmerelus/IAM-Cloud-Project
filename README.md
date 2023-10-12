@@ -5,7 +5,7 @@
 2. [Day 2: Configuring IAM](#day-2-configuring-iam)
 3. [Day 3: Integrating with Lambda and API Gateway](#day-3-integrating-with-lambda-and-api-gateway)
 ...
-## Day 1: Setting Up the Environment 🚀
+## Day 1: Setting Up the Environment
 
 ### Introduction
 
