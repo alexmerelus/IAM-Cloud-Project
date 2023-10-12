@@ -13,14 +13,21 @@ Today marked the beginning of my journey with the Cloud Resume Challenge. The pr
 
 ### Goals Achieved 🎯
 
-1. **IAM User Setup**: Successfully set up an IAM user with programmatic access. 
-    - (insert screenshot of IAM user here)
-2. **IAM Policy Creation**: Created a custom policy for accessing specific AWS services.
-    - (insert screenshot of policy here)
-3. **Secure Key Management**: Ensured that access keys were stored securely and not hard-coded.
-    - (insert screenshot of key management tool or method here)
-4. **Initial Project Setup**: Initialized a new repository on GitHub to track progress.
-    - (insert screenshot of GitHub repo here)
+1. **IAM User ![CR-IAG_App User Success](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/7e7cb4fe-1d95-4382-b779-c8a2bf7ec72d)
+Setup**: Successfully set up an IAM user with programmatic access. 
+    
+2. **IAM Policy Creation in JSON Format**: Created a custom policy for accessing specific AWS services.
+![JSON Policy Filled](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/907f2056-6300-4353-a54e-813a14d619ac)
+
+
+3. **Created S3 Bucket for static website**: Ensured S3 Bucket was created to host resume on AWS S3 with CloudFront
+    ![S3 Bucket Succes](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/76f38c37-0afe-483e-8d2b-2eed3226aa62)
+
+
+4. **Initial AWS CLI Setup**: Initialized AWS CLI to later sync AWS S3.
+  ![CLI file test](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/413b1cf3-8398-4c44-a412-1add4418aed5)
+
+
 
 ### Challenges Faced 🤔
 
