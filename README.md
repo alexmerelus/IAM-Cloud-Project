@@ -50,9 +50,59 @@ While the day was productive, I faced a few challenges:
 
 ...
 
-## Day 2: Configuring IAM
+## Day 2: Configuring IAM🌐
 
-Here is the content for Day 2. Discuss the tasks related to configuring IAM, the policies you set, roles, etc.
+---
+
+#### **Introduction** 📜
+
+On the second day of the Cloud Resume Challenge, my focus shifted to a deeper exploration of AWS's IAM (Identity and Access Management) and setting up the crucial backend components for the serverless application.
+
+---
+
+#### **IAM - The Heart of AWS Security** 🔐
+
+IAM allows me to manage access to AWS services and resources securely. Today, I used it to create and manage AWS users and groups, and used permissions to allow and deny their access to AWS resources.
+
+**Policy Simulator** 🕹️:
+The AWS Policy Simulator is a tool to help you understand, test, and validate the effects of your access control policies. I was able to use this to simulate and validate the IAM policies, ensuring they grant permissions as intended.
+
+![Policy Simulator Success](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/fdda4262-2f44-41d5-bd7d-65f56e6ddd2f)
+
+
+---
+
+#### **Setting Up the Backend** 💻
+
+The backend of our application is crucial as it's responsible for the logic that increments and displays the visit count.
+
+**Lambda Integration with API Gateway** 🚪:
+Lambda lets me run code without provisioning or managing servers. I integrated Lambda with API Gateway to trigger my function each time the API endpoint is hit. This allows me to execute the visit counter logic.
+
+![Lambda Function code](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/6f8f6e94-ad01-4e9e-868d-31992a7a76a6)
+
+
+**CloudResumelAG-EC2Role Setup** 🛠️:
+Roles in AWS allow services to interact with resources without the use of security credentials. I set up the `CloudResumelAG-EC2Role` to grant specific permissions to our resources, ensuring the application components can communicate effectively.
+
+![CR-IAG_EC2Role Review ](https://github.com/alexmerelus/IAM-Cloud-Project/assets/138509128/128b39f6-b6cc-418b-b86e-cfaffe2bc480)
+
+
+---
+
+#### **Conclusion** 🌟
+
+Day 2 was all about setting a strong foundation for the application's security and backend logic. Through IAM, I made sure I secured environment, and with Lambda and API Gateway, I'm now ready to handle and display the website's visits.
+
+Stay tuned for more updates as I continue our journey into the Cloud Resume Challenge!
+
+---
+
+Looking forward to Day 3, for frontend integration and more! 🚀🔍
+
+---
+
+🔗 [Back to Table of Contents](#IAM-Cloud-Project)
 
 ...
 
