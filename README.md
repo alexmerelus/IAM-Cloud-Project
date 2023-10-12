@@ -108,6 +108,40 @@ Looking forward to Day 3, for frontend integration and more! 🚀🔍
 
 ## Day 3: Integrating with Lambda and API Gateway
 
-On this day, you integrated with Lambda and API Gateway. Write about the steps you took, the configuration settings, and any testing or debugging you performed.
+**"Decoding the IAM Project: A Deep Dive into AWS Cloud Resume's Visitor Counter"**
+
+🌥️ Today, I'm peeling back the layers of the IAM project I've been working on for my AWS cloud resume. If you've been curious about how Im trying to display a visit count on the index page of my website, grab a coffee ☕ and let's delve right in!
+
+### 1. **Integration with DynamoDB**:
+Our first player in this game is DynamoDB - Amazon's managed NoSQL database service. Specifically, I set up a table named 'ResumeVisitCounter' for this.
+
+### 2. **The Aim of the Game**:
+So, what’s this function all about? Simply put, it’s a fancy visit tracker for my resume site. Every time someone checks out my site, this function makes sure it's noted.
+
+### 3. **How's it Work?**:
+- First up, every time the function’s called upon, it makes a change in our DynamoDB table.
+- The item that gets the update? It's the one labeled 'SiteName' and specifically the 'ResumeSite' value.
+- And the change? Well, it ups the 'VisitCount' by one, counting every awesome person (like you) who drops by!
+
+### 4. **And the Crowd Goes...**:
+After adding to the count, the function doesn't keep it a secret. It fetches the new count and crafts a response to show the new number. Think of it as a virtual pat on the back, acknowledging your visit in the form of a 200 status code and a JSON response.
+
+### 5. **The Grand Scheme of Things**:
+Now, if you're thinking, "How does this all fit together?", here's the deal:
+- Imagine every time someone lands on my resume page, this function gets a nudge via maybe an API Gateway.
+- It then does its magic, keeping the numbers in DynamoDB so we never lose count, even if it's the millionth visit (a guy can dream, right?).
+
+🔍 **A Little Side Note**:
+While everything sounds cool, I've run into a teeny problem. There's this Decimal to JSON serialization hiccup in Lambda. It's like trying to fit a square peg into a round hole. Decimal, straight from the database, and JSON don't wwant to work together. 
+
+But hey, every challenge is an opportunity and I've been brainstorming some fixes:
+
+- **Option 1**: Ditch Lambda for a Python script on EC2. Simple and neat.
+- **Option 2**: Swap out DynamoDB for a buddy like PostgreSQL.
+- **Option 3**: Pair up API Gateway and DynamoDB SDK. Get API Gateway to act as the mediator, transforming the Decimal before the JSON sees it.
+- **Option 4**: Move the counting party to the front-end with JavaScript.
+- **Option 5**: Create a counter microservice, bypassing the need for JSON altogether.
+
+I'm still on the fence about which route to take. In any case, that’s my update for now and will be working on here and there over the next few days. 👨‍💻
 
 ...
