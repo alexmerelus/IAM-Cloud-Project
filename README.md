@@ -113,25 +113,16 @@ Looking forward to Day 3, for frontend integration and more! 🚀🔍
 🌥️ Today, I'm peeling back the layers of the IAM project I've been working on for my AWS cloud resume. If you've been curious about how Im trying to display a visit count on the index page of my website, but it looks like this is going to be more complex that neccessary so im going to pivot to a different feature that still takes advantage of the Lambda and Api gateway. 
 
 ### 1. **Integration with DynamoDB**:
-The first feature was the DynamoDB - Amazon's managed NoSQL database service. Specifically, I wanted to set up a table named 'ResumeVisitCounter' for this.
-
-### 2. **The Aim of the Game**:
-Designed to be a visit tracker for my resume site so that every time someone checks out my site, this function makes sure it's noted.
+The first feature was the DynamoDB - Amazon's managed NoSQL database service. Specifically, I wanted to set up a table named 'ResumeVisitCounter' for this. This was designed to be a visit tracker for my resume site so that every time someone checks out my site, this function makes sure it's noted.
 
 ### 3. **How's it Work?**:
-Every time the function’s called upon, it should make a change in the DynamoDB table.
-- The'SiteName' get updated and the 'ResumeSite' value is changed.
-- Each change increase the 'VisitCount' by one, counting every person who visits.
+Every time the function’s called upon, it should make a change in the DynamoDB table. The 'SiteName' gets updated and the 'ResumeSite' value is changed and each change increase the 'VisitCount' by one, counting every person who visits. So after adding to the count, the function fetches the new count and generates a response to show the new number, in the form of a 200 status code and a JSON response.
 
-### 4. **And the Crowd Goes...**:
-After adding to the count, the function fetches the new count and generates a response to show the new number, in the form of a 200 status code and a JSON response.
-
-### 5. ** Big Picture **:
 - Every time someone lands on my resume page, this function gets a notified by the API Gateway.
 - Keeping the numbers in DynamoDB allows me to save the progress over time.
 
-🔍 **Pivoting**:
-This felt like a great idea at the time but the way JSON and DynamoDB's number data type is setup, they dont recognize Decimal types the same and it led to a serialization error when trying to convert a Decimal directly to JSON. Basically like trying to fit a square peg into a round hole. A decimal object, straight from the database to JSON format wasnt possible.
+😑😑😑  **Pivoting**:
+This felt like a great idea at the time but the way JSON and DynamoDB's number data type is setup, they dont recognize decimal types the same and it led to a serialization error when trying to convert a decimal directly to JSON. Basically like trying to fit a square peg into a round hole. A decimal object, straight from the database to JSON format wasnt possible.
 
 Alternate options,
 
