@@ -115,7 +115,7 @@ Looking forward to Day 3, for frontend integration and more! 🚀🔍
 ### 1. **Integration with DynamoDB**:
 The first feature was the DynamoDB - Amazon's managed NoSQL database service. Specifically, I wanted to set up a table named 'ResumeVisitCounter' for this. This was designed to be a visit tracker for my resume site so that every time someone checks out my site, this function makes sure it's noted.
 
-### 3. **How's it Work?**:
+### 3. **How it 'supposed' to work?**:
 Every time the function’s called upon, it should make a change in the DynamoDB table. The 'SiteName' gets updated and the 'ResumeSite' value is changed and each change increase the 'VisitCount' by one, counting every person who visits. So after adding to the count, the function fetches the new count and generates a response to show the new number, in the form of a 200 status code and a JSON response.
 
 - Every time someone lands on my resume page, this function gets a notified by the API Gateway.
