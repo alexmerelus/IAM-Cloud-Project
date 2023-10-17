@@ -125,9 +125,9 @@ Every time the function’s called upon, it should make a change in the DynamoDB
 This felt like a great idea at the time but the way JSON and DynamoDB's number data type is setup, they dont recognize decimal types the same and it led to a serialization error when trying to convert a decimal directly to JSON. A decimal object, straight from the database to JSON format isnt possible.
 
 
-🕹️ In an attempt to fully understand the issue myself, here's the best way to explain whats happeneing: 
+⁉️ In an attempt to fully understand the issue myself, here's the best way to explain whats happeneing: 
 
-Imagine playing a video game where you collect coins. In this game, the coins you collect can be regular whole numbers like 1, 2, 3, but sometimes, they have decimal values, like 1.5 or 2.75. The game system stores these coin values very precisely so that every player gets the exact amount they earned.
+🕹️ Imagine playing a video game where you collect coins. In this game, the coins you collect can be regular whole numbers like 1, 2, 3, but sometimes, they have decimal values, like 1.5 or 2.75. The game system stores these coin values very precisely so that every player gets the exact amount they earned.
 
 ### Original Setup:
 
@@ -153,12 +153,12 @@ I would need a translator to convert the game's coin values into something the s
 
 This added a layer of complexity that I did not anticipate and didnt know how to address without sacrificing functionality, so ive decided to list alternate options:
 
-- **Option 1**: Ditch Lambda for a Python script on EC2. (Paying for extra services)
-- **Option 2**: Pair up API Gateway and DynamoDB SDK. Get API Gateway to act as the mediator, transforming the Decimal before the JSON sees it. (Too Complex)
-- **Option 4**: Move the counter to the front-end with JavaScript. (Not my expertise)
-- **Option 5**: Create a different feature altogether that still uses Lambda and DynamoDB...
+- **Option 1**: Ditch Lambda for a Python script on EC2. (Adding unnecessary costs)
+- **Option 2**: Pair up API Gateway and DynamoDB SDK. Get API Gateway to act as the mediator, transforming the Decimal before the JSON sees it. (Even more complex)
+- **Option 3**: Move the counter to the front-end with JavaScript. (Not my expertise)
+- **Option 4**: Create a different feature altogether that still uses Lambda and DynamoDB...
 
 ## Project Votes 🗳️
-In the end, I chose option 5 because I was sacrificing simplicity for 'wow' factor when i ultimately want to demonstrate function. So I'm currently working on a feature ive called "Project Votes", a system that adds an interactive element to the portfolio, allowing visitors to simply vote as a way to engage with the website as more projects get added. It's currently in the works. Stay tuned. 👨‍💻
+In the end, I chose option 4 because I was sacrificing simplicity for 'wow' factor when i ultimately want to demonstrate function. So I'm currently working on a feature I've called "Project Votes", a system that adds an interactive element to the portfolio, allowing visitors to simply vote as a way to engage with the website as more projects get added. It's currently in the works. Stay tuned. 👨‍💻
 
 ...
